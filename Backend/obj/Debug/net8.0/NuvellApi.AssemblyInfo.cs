@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NuvellApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5931355bc80840221abeef566027228aecda0970")]
 [assembly: System.Reflection.AssemblyProductAttribute("NuvellApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NuvellApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
