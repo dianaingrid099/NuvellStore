@@ -1,0 +1,35 @@
+
+const priceEl = document.querySelector('.price');
+const sizeSelect = document.getElementById('size');
+const inputQty = document.getElementById('counter');
+const btnMinus = document.getElementById('btn-minus');
+const btnPlus = document.getElementById('btn-plus');
+const priceMap = {
+    small: 89.90,
+    medium: 99.90,
+    large: 110.00
+};
+function formatBRL(value) {
+    return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+function updateTotal() {
+    const size = sizeSelect.value;
+    const unitPrice = priceMap[size];
+    const quantity = parseInt(inputQty.value);
+    const total = unitPrice * quantity;
+    priceEl.textContent = formatBRL(total);
+}
+btnMinus.addEventListener('click', () => {
+    let qty = parseInt(inputQty.value);
+    if (qty > 1) {
+        inputQty.value = qty - 1;
+        updateTotal();
+    }
+});
+btnPlus.addEventListener('click', () => {
+    let qty = parseInt(inputQty.value);
+    inputQty.value = qty + 1;
+    updateTotal();
+});
+sizeSelect.addEventListener('change', updateTotal);
+updateTotal();

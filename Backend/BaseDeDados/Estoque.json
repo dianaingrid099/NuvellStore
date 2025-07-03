@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "fbd72f68-7626-4d36-ac0f-685dc4650eda",
+    "Nome": "leona",
+    "Descricao": "teste",
+    "Preco": 20,
+    "Estoque": 60,
+    "QuantidadeNoPedido": null
+  }
+]

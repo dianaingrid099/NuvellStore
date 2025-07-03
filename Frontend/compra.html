@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Nuvell</title>
+    <link rel="stylesheet" href="assets/css/page/Compra/compra.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=League Spartan"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/81389dc184.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="index.html" class="icon-logo">
+          <i class="fa-solid fa-paw"></i>
+          <h2>Nuvell</h2>
+        </a>
+
+        <section class="navbar-texto">
+          <a href="index.html">Destaques</a>
+          <a href="colecao.html">Coleções</a>
+        </section>
+
+        <div class="icons">
+          <a href="#" id="abrir-carrinho"
+            ><i class="fa-solid fa-cart-shopping btn-compra"></i
+          ></a>
+          <a href="login.html"><button class="btn-entrar" id="botao-entrar">Entrar</button></a>
+          <a href="#"><button class="btn-entrar" id="botao-sair">Sair</button></a>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="carrinho"
+      class="position-fixed top-0 text-dark p-4"
+      style="
+        background-color: #fb9eb3;
+        width: 360px;
+        height: 100vh;
+        right: -360px;
+        transition: right 0.2s;
+        z-index: 1050;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      "
+    >
+      <div class="d-flex justify-content-between mb-4">
+        <p class="h4">Meu carrinho</p>
+        <button id="fechar-carrinho" class="btn btn-sm btn-outline-dark">
+          ✖
+        </button>
+      </div>
+
+      <section
+        id="produtos-carrinho"
+        class="overflow-auto flex-grow-1 mb-3"
+        style="max-height: 60vh"
+      ></section>
+
+      <p class="h5" id="preco-total">Total: R$0</p>
+      <a href="#" id="finalizar-compra"
+        ><button class="btn btn-dark text-light mt-2">Finalizar Compra</button>
+      </a>
+    </section>
+
+    <div class="conjunto">
+      <div class="lado-esquerdo">
+        <div class="caixa-cadastro">
+          <h2>Endereço de Entrega</h2>
+          <form>
+            <!-- 1ª linha -->
+            <div class="formar-coluna coluna1 coluna-maior">
+              <label for="Nome"> Nome Completo </label>
+              <input type="text" id="Nome" placeholder="Nome" required />
+            </div>
+
+            <div class="formar-coluna coluna1 coluna-maior">
+              <label for="CEP">CEP </label>
+              <input type="text" id="CEP" placeholder="CEP" required />
+            </div>
+
+            <!-- 2ª linha -->
+            <div class="formar-coluna coluna-maior">
+              <label for="Rua">Rua</label>
+              <input type="text" id="Rua" placeholder="Rua" required />
+            </div>
+
+            <div class="formar-coluna">
+              <label for="Numero">Número</label>
+              <input type="text" id="Numero" placeholder="Número" required />
+            </div>
+
+            <div class="formar-coluna">
+              <label for="Bairro">Bairro</label>
+              <input type="text" id="Bairro" placeholder="Bairro" required />
+            </div>
+
+            <!-- 3ª linha -->
+            <div class="formar-coluna">
+              <label for="Cidade">Cidade</label>
+              <input type="text" id="Cidade" placeholder="Cidade" required />
+            </div>
+
+            <div class="formar-coluna">
+              <label for="Celular">Celular</label>
+              <input type="text" id="Celular" placeholder="Celular" required />
+            </div>
+
+            <div class="formar-coluna coluna-maior">
+              <label for="CEP">Complemento</label>
+              <input
+                type="text"
+                id="Complemento"
+                placeholder="Complemento"
+                required
+              />
+            </div>
+          </form>
+
+          <div class="linha-divisora">
+            <div class="linha"></div>
+          </div>
+
+          <div class="botao-salvar">
+            <button class="botao-salvar-entrega" type="submit">Salvar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="lado-direito">
+        <div class="conteudo-pagamento">
+          <h2>Endereço de Entrega</h2>
+
+          <div class="pagamento-opcao">
+            <input type="radio" name="payment" id="boleto" />
+            <img
+              class="boleto"
+              src="assets/css/page/Compra/image/boleto.png"
+              alt="Boleto Bancário"
+            />
+            <label for="boleto">Boleto Bancário</label>
+          </div>
+          <div class="pagamento-opcao">
+            <input type="radio" name="payment" id="pix" />
+            <img src="assets/css/page/Compra/image/pix.png" alt="Pix" />
+            <label for="pix">Pix</label>
+          </div>
+          <div class="pagamento-opcao">
+            <input type="radio" name="payment" id="cartao" />
+            <img
+              src="assets/css/page/Compra/image/cartao.png"
+              alt="Cartão de Crédito"
+            />
+            <label for="cartao">Cartão de Crédito</label>
+          </div>
+
+          <div class="linha-divisora-direita">
+            <div class="linha-direita"></div>
+          </div>
+
+          <div class="botao-comprar">
+            <button class="botao-comprar-texto" type="submit">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./JavaScript/carrinho.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JavaScript/login.js"></script>
+  </body>
+</html>

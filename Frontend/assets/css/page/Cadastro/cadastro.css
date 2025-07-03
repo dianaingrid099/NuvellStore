@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan';
+}
+
+body {
+    background-image: url('image/TelaFundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body,
+html {
+    height: 100vh;
+}
+
+.Conjunto {
+    display: flex;
+    height: 100vh;
+}
+
+.lado-esquerdo {
+    flex: 1;
+}
+
+.lado-direito {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixa-cadastro {
+    border-style: solid;
+    border-width: 0.13rem;
+    border-color: #4a2e2e;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    max-height: 500px;
+}
+
+.caixa-cadastro h2 {
+    margin-bottom: 2rem;
+    color: #4a2e2e;
+    font-size: xx-large;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(4, 172px);
+    gap: 16px;
+    padding: 10px 0 0 0;
+    width: 100%;
+    max-width: 736px;
+}
+
+.formar-coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-maior {
+    grid-column: span 2;
+}
+
+#Senha {
+    margin-right: -10px;
+}
+
+label {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+}
+
+#email,
+#nome,
+#sobrenome {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #4a2e2e;
+}
+
+#Senha,
+#Senha2 {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #4a2e2e;
+}
+
+#CPF,
+#Celular,
+#CEP,
+#Endereço {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #4a2e2e;
+}
+
+.linha-divisora {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha {
+    height: 2px;
+    width: 40%;
+    background-color: #4a2e2e;
+    margin: 1rem 0;
+}
+
+.botao-criar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-criar-conta {
+    width: 50%;
+    background-color: #4a2e2e;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.botao-criar-conta:hover {
+    background-color: #7a4a4a;
+}
+
+.botao-voltar {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+}
+
+.botao-voltar img {
+    width: 50px;
+    background-color: #fff8f3;
+    border-radius: 20px;
+    
+}
